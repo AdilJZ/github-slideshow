@@ -1,0 +1,11 @@
+-- A Query that returns the highest and lowest salary from the professors table excluding the professor named 'Wilson'.
+
+
+
+SELECT MAX(salary) as higest_salary,
+
+MIN(salary) as lowest_salary
+
+FROM professors
+
+WHERE last_name != 'Wilson'
