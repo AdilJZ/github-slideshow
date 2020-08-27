@@ -1,0 +1,20 @@
+--A query that shows the student's name, the courses the student is taking and the professors that teach that course. 
+
+
+SELECT student_name, se.course_no, p.last_name
+
+FROM students s
+
+INNER JOIN student_enrollment se
+
+ON s.student_no = se.student_no
+
+INNER JOIN teach t
+
+ON se.course_no = t.course_no
+
+INNER JOIN professors p
+
+ON t.last_name = p.last_name
+
+ORDER BY student_name;
